@@ -1,3 +1,4 @@
+require('dotenv').config()
 const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
@@ -12,4 +13,6 @@ client.on('message', async  (message) => {
     
 });
 
-client.login('ODgwNTA2NDkwMjI0NTM3NjUw.GwPZm7.MdddQjS9jvvAYg3F85Vzz6HLCMqBSozUu9pOTI');
+console.log(process.env.DISCORD_SECRET)
+
+client.login('');
